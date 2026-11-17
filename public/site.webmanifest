@@ -1,0 +1,17 @@
+{
+  "name": "OOSAB — Crypto Card Without KYC",
+  "short_name": "OOSAB",
+  "description": "Spend crypto directly from Ledger or Trezor with an instant crypto card without KYC for Apple Pay and Google Pay.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#0A2540",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+import { OosabUser, SupportedWallet } from '../types';
+
+export const BTC_USD_RATE = 98420;
+
+export const SUPPORTED_WALLETS: SupportedWallet[] = [
+  {
+    id: 'ledger',
+    name: 'Ledger',
+    category: 'Hardware',
+    protocol: 'Ledger Live BLE & USB-C',
+    chains: ['Bitcoin', 'Ethereum', 'Solana'],
+    description:
+      'Authorize real-time card spend allowances directly from your Nano X, Stax, or Flex hardware device without moving funds off cold storage.',
+    sampleAddress: 'bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh',
+    featured: true,
+  },
+  {
+    id: 'phantom',
+    name: 'Phantom',
+    category: 'Mobile & Browser',
+    protocol: 'WalletConnect v2 & Extension',
+    chains: ['Bitcoin', 'Solana', 'Ethereum'],
+    description:
+      'Link Phantom in one tap to spend native BTC or multi-chain balances at checkout with zero pre-deposits.',
+    sampleAddress: 'bc1p8dencj82k9v04s9j6g2f40k8r2x7e5w3m9q2a',
+    featured: true,
+  },
+  {
+    id: 'trust',
+    name: 'Trust Wallet',
+    category: 'Mobile & Browser',
+    protocol: 'WalletConnect v2 & Deep Link',
+    chains: ['Bitcoin', 'BNB Chain', 'Ethereum'],
+    description:
+      'Connect Trust Wallet seamlessly and settle contactless Apple Pay or Google Pay purchases straight from your self-custody balance.',
+    sampleAddress: 'bc1q9v7m4p3x2k8w5n1f6c4r8t2y7h3j9l0d5s6a',
+    featured: true,
+  },
+  {
+    id: 'metamask',
+    name: 'MetaMask',
+    category: 'Mobile & Browser',
+    protocol: 'MetaMask SDK & Snaps',
+    chains: ['Bitcoin Snap', 'Ethereum', 'Arbitrum'],
+    description:
+      'Use MetaMask Bitcoin Snap or wrapped BTC balances with scoped per-transaction spending caps.',
+    sampleAddress: '0x71C7656EC7ab88b098defB751B7401B5f6d8976F',
+    featured: true,
+  },
+  {
+    id: 'coinbase',
+    name: 'Coinbase Wallet',
+    category: 'Mobile & Browser',
+    protocol: 'Coinbase Wallet SDK',
+    chains: ['Bitcoin', 'Base', 'Ethereum'],
+    description:
+      'Self-custody spending straight from Coinbase Wallet with instant smart-wallet session keys.',
+    sampleAddress: '0x4B20993Bc481177ec7E8f571ceCaE8A9e22C02db',
+    featured: true,
+  },
+  {
+    id: 'trezor',
+    name: 'Trezor',
+    category: 'Hardware',
+    protocol: 'Trezor Suite Connect',
+    chains: ['Bitcoin', 'Ethereum'],
+    description:
+      'Sign delegated spend permissions securely on your Trezor Safe 3 or Model T while keeping keys offline.',
+    sampleAddress: 'bc1q3f8k2n9m4v7x5c6z1l8p2r4t6y9w0q3e7u5i',
+    featured: true,
+  },
+  {
+    id: 'rainbow',
+    name: 'Rainbow',
+    category: 'Mobile & Browser',
+    protocol: 'WalletConnect v2',
+    chains: ['Ethereum', 'Optimism', 'Base'],
+    description:
+      'Fast, expressive mobile wallet linking for instant contactless spending without transferring custody.',
+    sampleAddress: '0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc',
+    featured: false,
+  },
+  {
+    id: 'exodus',
+    name: 'Exodus',
+    category: 'Mobile & Browser',
+    protocol: 'Web3 Browser & Passkey',
+    chains: ['Bitcoin', 'Solana', 'Ethereum'],
+    description:
+      'Desktop and mobile self-custody integration letting you spend straight from your Exodus Bitcoin vault.',
+    sampleAddress: 'bc1q7h4j8k2m9n3p5r6t1v4w8x2z9c3b6n5m8q1w',
+    featured: false,
+  },
+];
+
+export const DEMO_TEAM_USER: OosabUser = {
+  id: 'team-demo-01',
+  fullName: 'Alex Mercer',
+  email: 'team@oosab.io',
+  password: 'oosab2026',
+  currency: 'USD',
+  cardFinish: 'obsidian',
+  cardNumber: '4532 8910 4421 8841',
+  cardExpiry: '11/29',
+  cardCvv: '418',
+  cardFrozen: false,
+  applePayLinked: true,
+  googlePayLinked: true,
+  connectedWalletId: 'ledger',
+  walletAddress: 'bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh',
+  btcBalance: 0.4825,
+  createdAt: '2026-11-10T09:30:00Z',
+  transactions: [
+    {
+      id: 'tx-104',
+      merchant: 'Blue Bottle Coffee',
+      category: 'Dining',
+      fiatAmount: 7.4,
+      currency: 'USD',
+      btcAmount: 0.000075,
+      walletName: 'Ledger',
+      paymentRail: 'Apple Pay',
+      timestamp: 'Today, 09:14 AM',
+      status: 'Settled',
+    },
+    {
+      id: 'tx-103',
+      merchant: 'Delta Air Lines',
+      category: 'Travel',
+      fiatAmount: 418.0,
+      currency: 'USD',
+      btcAmount: 0.004247,
+      walletName: 'Ledger',
+      paymentRail: 'Virtual Card',
+      timestamp: 'Yesterday, 04:52 PM',
+      status: 'Settled',
+    },
+    {
+      id: 'tx-102',
+      merchant: 'Whole Foods Market',
+      category: 'Groceries',
+      fiatAmount: 94.65,
+      currency: 'USD',
+      btcAmount: 0.000962,
+      walletName: 'Phantom',
+      paymentRail: 'Google Pay',
+      timestamp: 'Nov 12, 06:18 PM',
+      status: 'Settled',
+    },
+  ],
+};
